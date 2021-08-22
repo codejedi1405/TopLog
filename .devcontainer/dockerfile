@@ -1,0 +1,17 @@
+FROM ubuntu:20.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get clean && apt-get update && apt-get -f install -y --allow-unauthenticated \
+\
+# DEVELOPMENT TOOLS
+git:amd64 \
+cmake:amd64 \
+cppcheck:amd64 \
+gdb:amd64 \
+libsfml-dev:amd64 \
+python3:amd64 \
+python3-pip
+
+# PYTHON PACKAGE INSTALL
+RUN python3 -m pip install pygame

@@ -1,0 +1,26 @@
+{
+    "name": "TopLog-Development-Environment",
+    "dockerFile": "dockerfile",
+    "containerEnv":
+    {
+        "DISPLAY": "${DISPLAY}"
+    },
+    "runArgs":[
+        "--privileged",
+        "--net=host",
+        "-e", "DISPLAY=${env:DISPLAY}",
+        "-v", "/tmp/.X11-unix:/tmp/.X11-unix"],
+    "settings": 
+    {
+        "workbench.colorTheme": "Night Owl",
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": 
+    [
+        "sdras.night-owl",
+        "ms-python.python",
+        "njpwerner.autodocstring",
+        "kevinrose.vsc-python-indent",
+        "formulahendry.code-runner"
+	]
+}
