@@ -8,6 +8,7 @@ RUN apt-get clean && apt-get update && apt-get -f install -y --allow-unauthentic
 git:amd64 \
 cmake:amd64 \
 cppcheck:amd64 \
+gcc:amd64 \
 gdb:amd64 \
 libsfml-dev:amd64 \
 python3:amd64 \
